@@ -148,14 +148,21 @@ lo que impone un límite observacional al enfoque.
 ## Cita
 
 Si usas este trabajo, cita el artículo asociado (en revisión):
-Gallo Martínez, J. A.; Villalba Morales, J. D.; Caicedo Dorado, A.
-*Clasificación automática de tipologías estructurales de edificaciones mediante deep
-learning e imágenes de Google Street View: un estudio interpretable en Chapinero, Bogotá.*
+
+> Gallo Martínez, J. A.; Villalba Morales, J. D.; Caicedo Dorado, A.
+> *Clasificación Semiautomática de Tipologías Estructurales de Edificaciones
+> Mediante Deep Learning e Imágenes de Google Street View: Un Estudio
+> Interpretable en Chapinero, Bogotá.*
+> Pontificia Universidad Javeriana, 2026.
 
 ---
 
 ## Licencia y datos
 
-Código bajo la licencia que definas (sugerencia: MIT para el código).
+El código de este repositorio está disponible bajo la licencia **MIT**
+(ver archivo [`LICENSE`](LICENSE)).
+
 Las imágenes de Google Street View **no se incluyen ni se redistribuyen**;
-su uso está sujeto a las condiciones de Google Maps Platform.
+su uso está sujeto a las [condiciones de Google Maps Platform](https://cloud.google.com/maps-platform/terms).
+El repositorio conserva únicamente las coordenadas y etiquetas necesarias
+para regenerar el dataset.
