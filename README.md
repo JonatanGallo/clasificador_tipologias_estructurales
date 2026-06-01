@@ -48,8 +48,8 @@ MobileNetV3-Large, ViT-B/16**.
 ├── .gitignore
 ├── Pipeline_chapinero.py        # Fases 1–3: adquisición GSV + segmentación
 ├── dataset_builder.py           # Fase 5: D-RAW / D-SEG + partición espacial
-├── etiquetador.py               # Fase 4: herramienta de etiquetado (Tkinter)
 ├── src/
+│   ├── etiquetador.py           # Fase 4: herramienta de etiquetado (Tkinter)
 │   ├── train.py                 # entrenamiento parametrizable
 │   ├── evaluate.py              # evaluación (métricas, matriz de confusión)
 │   └── gradcam_analysis.py      # interpretabilidad + análisis de zonas
@@ -98,7 +98,7 @@ python Pipeline_chapinero.py --mode test --target 10
 python Pipeline_chapinero.py --mode prod --target 600
 
 # Fase 4 — etiquetado manual
-python etiquetador.py
+python src/etiquetador.py
 
 # Fase 5 — construcción del dataset con partición espacial
 python dataset_builder.py \
