@@ -1,4 +1,4 @@
-# Clasificación de tipologías estructurales de edificaciones — Chapinero, Bogotá
+# Clasificador de Tipologías Estructurales de edificaciones — Chapinero, Bogotá
 
 Pipeline semi-automatizado para estimar la **tipología estructural** de edificaciones
 (mampostería *MAS*, pórticos de concreto *PC*, sistema dual *DUAL*) a partir de
