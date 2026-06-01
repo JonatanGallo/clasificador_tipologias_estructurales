@@ -1,0 +1,29 @@
+# Dependencias del pipeline. Probado en Python 3.11/3.12.
+# Instalar en un entorno virtual:  pip install -r requirements.txt
+
+# Deep learning
+torch>=2.3.0
+torchvision>=0.18.0
+transformers>=4.40.0          # SegFormer
+grad-cam>=1.5.0               # interpretabilidad (pytorch_grad_cam)
+
+# Métricas / datos
+scikit-learn>=1.4.0
+pandas>=2.2.0
+numpy>=1.26.0
+
+# Geoespacial
+osmnx>=2.0.0                  # usa features_from_bbox (API 2.x)
+geopandas>=0.14.0
+
+# Visión / imagen
+opencv-python>=4.9.0
+pillow>=10.3.0
+
+# Visualización (entrenamiento/diagnóstico)
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Utilidades
+tqdm>=4.66.0
+python-dotenv>=1.0.0          # carga de GSV_API_KEY desde .env

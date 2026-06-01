@@ -1,0 +1,105 @@
+# ============================================================================
+# .gitignore — Tesis: clasificacion de tipologias estructurales (Chapinero)
+# Objetivo: versionar SOLO el pipeline reproducible. Quedan fuera:
+#   - secretos (API key de GSV)
+#   - imagenes y pesos (tamano + licencia de Google Street View)
+#   - scripts de generacion de figuras y archivos del articulo (LaTeX)
+#   - notas de trabajo y volcados de codigo
+# NOTA: en .gitignore los comentarios van en su PROPIA linea (no al lado del patron).
+# ============================================================================
+
+# ── Secretos / credenciales ────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.key
+secrets*
+# Notas internas de seguridad: nunca publicar
+SECURITY_API_KEY.txt
+
+# El volcado completo del codigo CONTIENE la API key en texto plano: NUNCA subir
+codigo_completo.txt
+resumen_codigo.py
+
+# ── Entornos / caches de Python ─────────────────────────────────────────────
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ── Datos e imagenes (NO redistribuibles: Google Street View ToS) ───────────
+data/imagenes_descargadas/
+data/piloto/
+*.jpg
+*.jpeg
+
+# ── Datasets finales: ignorar imagenes pero CONSERVAR los CSV de splits ─────
+datasets_finales/**
+!datasets_finales/**/
+!datasets_finales/**/*.csv
+!datasets_finales/**/*.txt
+
+# ── Corridas de entrenamiento: pesos y paneles pesados ──────────────────────
+runs/
+runs_seeds/
+runs_*/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# ── Salidas generadas y articulo (LaTeX) y figuras ──────────────────────────
+outputs/
+# Carpeta del articulo (main.tex, refs.bib, PDF)
+files/
+files.zip
+*.pdf
+*.png
+*.svg
+*.eps
+*.tex
+# Subproductos de compilacion LaTeX
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+texput.log
+
+# ── Notas de trabajo (no forman parte del entregable de codigo) ─────────────
+OBSERVACIONES.md
+plan_accion_semana.md
+plan_*.md
+estructura_proyecto.txt
+lista.py
+
+# ── Scripts de generacion de figuras / preparacion del articulo ─────────────
+# (excluidos a proposito: el repo versiona el pipeline, no la maquetacion)
+generar_figuras_tesis.py
+generar_ejemplos_clase.py
+generar_galeria_gradcam.py
+generar_gradcam_mejores.py
+generar_spatial_split.py
+make_figures.py
+plot_compare_raw_seg.py
+plot_confusion_grid.py
+scripts_figuras_faltantes.py
+seleccionar_ejemplos.py
+consolidar_resultados.py
+analyze_results.py
+metricas_extra.py
+validar_figuras.py
+validar_referencias.py
+html_png.py
+
+# ── Sistema operativo / editor ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

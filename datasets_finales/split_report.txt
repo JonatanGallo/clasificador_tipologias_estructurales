@@ -1,0 +1,6 @@
+Total entrenable: 1173
+Por split: {'val': 174, 'train': 837, 'test': 162}
+  train: {'DUAL': 304, 'MAS': 263, 'PC': 270}
+  val: {'DUAL': 70, 'PC': 51, 'MAS': 53}
+  test: {'MAS': 53, 'PC': 52, 'DUAL': 57}
+Grid size: 0.002°  Seed: 42
